@@ -1,0 +1,268 @@
+:root {
+    --primary-bg-color: #f8f8f8;
+    --secondary-bg-color: #fff;
+    --primary-text-color: #666;
+    --secondary-text-color: #999;
+}
+body.active {
+    --primary-bg-color: #222;
+    --secondary-bg-color: #333;
+    --primary-text-color: #fff;
+    --secondary-text-color: #f8f8f8;
+}
+body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--primary-text-color);
+    background: var(--primary-bg-color);
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+input,textarea {
+    appearance: radio !important;
+    -moz-appearance: radio !important;
+    -webkit-appearance: radio !important;
+    -o-appearance: radio !important;
+    -ms-appearance: radio !important;
+}
+h2 {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 36px;
+}
+.main-wrapper{
+    background: var(--primary-bg-color);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.sign-wrapper {
+    padding: 20px 45px;
+    background: var(--secondary-bg-color);
+    margin: 0 auto;
+    box-shadow: 0 15px 16.83px 0.17px rgb(0 0 0 / 5%);
+    -moz-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 15px 16.83px 0.17px rgb(0 0 0 / 5%);
+    -o-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+}
+input:not([type=checkbox]) {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid var(--secondary-text-color);
+    padding: 6px 30px;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    outline:none;
+    background: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+::placeholder{
+    color: var(--primary-text-color);
+}
+input:focus, input:focus::-webkit-input-placeholder, input:focus::-moz-placeholder, input:focus:-ms-input-placeholder {
+    border-bottom: 1px solid var(--primary-text-color);
+    outline: none;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+label.form-label{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    color: var(--secondary-text-color);
+}
+img{max-width: 100%;height: auto;}
+
+#show-pwd{
+  position: absolute;
+  right: 5px;
+  left: unset;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  color: var(--secondary-text-color);
+  z-index: 11;
+  cursor: pointer;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-wrap {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    font-size: 20px;
+    margin-top: -4px;
+}
+.checkbox-wrap input:checked ~ .checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: var(--secondary-bg-color);
+}
+.checkbox-primary {
+    color: var(--primary-text-color);
+    text-align: left;
+}
+.checkbox-primary input:checked ~ .checkmark:after {
+    color: var(--primary-text-color);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-text-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 5px;
+    bottom: 5px;
+    background-color: var(--secondary-bg-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+    content: "\1f31e";
+    font-family: "icon";
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+    color: var(--primary-text-color);
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary-text-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-text-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    content: "\1f31c";
+    font-family: "icon";
+    color: var(--primary-text-color);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .silder-wrapper{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    right: 25px;
+    position: absolute;
+    z-index: 999;
+  }
+  @font-face {
+    font-family: 'icon';
+    src:  url('../fonts/icon/icon.eot');
+    src:  url('../fonts/icon/icon.eot#iefix') format('embedded-opentype'),
+      url('../fonts/icon/icon.ttf') format('truetype'),
+      url('../fonts/icon/icon.woff') format('woff'),
+      url('../fonts/icon/icon.svg#icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icon' !important;
+    speak-as: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-night:before {
+    content: "\1f31c";
+  }
+  .icon-sun:before {
+    content: "\1f31e";
+  }
