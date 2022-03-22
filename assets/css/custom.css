@@ -32,14 +32,13 @@ h2 {
     font-weight: 700;
     color: var(--primary-text-color);
     font-family: 'Nunito', sans-serif;
-    font-size: 36px;
+    font-size: 34px;
 }
 .main-wrapper{
     background: var(--primary-bg-color);
     display: flex;
     align-items: center;
-    height: 100vh;
-    min-height :100vh;
+    height:100%;
 }
 .sign-wrapper {
     padding: 20px 45px;
@@ -55,7 +54,6 @@ h2 {
     -webkit-border-radius: 20px;
     -o-border-radius: 20px;
     -ms-border-radius: 20px;
-    margin: 20px 0;
 }
 input:not([type=checkbox]) {
     width: 100%;
