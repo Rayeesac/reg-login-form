@@ -40,7 +40,6 @@ h2 {
     align-items: center;
     height: 100vh;
     min-height :100vh;
-    padding-top:10px;
 }
 .sign-wrapper {
     padding: 20px 45px;
@@ -56,6 +55,7 @@ h2 {
     -webkit-border-radius: 20px;
     -o-border-radius: 20px;
     -ms-border-radius: 20px;
+    margin: 20px 0;
 }
 input:not([type=checkbox]) {
     width: 100%;
