@@ -38,7 +38,7 @@ h2 {
     background: var(--primary-bg-color);
     display: flex;
     align-items: center;
-    height:100%;
+    margin-top: 20px;
 }
 .sign-wrapper {
     padding: 20px 45px;
